@@ -48,16 +48,17 @@ public class teacherinternalsselect extends AppCompatActivity implements Adapter
 
         Spinner ispinner = (Spinner)findViewById(R.id.spinner5);
         ispinner.setOnItemSelectedListener(this);
-        List<String> ia = new ArrayList<String>();
-        ia.add("Select Internals");
-        ia.add("IA1");
-        ia.add("IA2");
-        ia.add("IA3");
-        ArrayAdapter<String> dataAdapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, ia);
+        List<String> icategories = new ArrayList<String>();
+        icategories.add("Select Internals");
+        icategories.add("IA-1");
+        icategories.add("IA-2");
+        icategories.add("IA-3");
+        ArrayAdapter<String> idataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, icategories);
 
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        idataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        ispinner.setAdapter(dataAdapter1);
+        ispinner.setAdapter(idataAdapter);
+
 
     }
 

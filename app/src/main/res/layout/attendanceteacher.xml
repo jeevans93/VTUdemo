@@ -10,35 +10,38 @@
         android:layout_height="wrap_content"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="64dp"
         android:layout_below="@+id/textView25"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:fontFamily="@string/font_family_thin"
+        android:id="@+id/button4"
+        android:background="@drawable/textcolor"
+        android:onClick="addattendence"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/button5"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:id="@+id/button4"
-        android:background="@drawable/roundbutton"
-        android:onClick="addattendence"
-        android:layout_alignTop="@+id/button5"
-        android:layout_marginBottom="100dp"
-        android:layout_marginLeft="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="View"
+        android:fontFamily="@string/font_family_thin"
         android:id="@+id/button5"
-        android:background="@drawable/roundbutton"
+        android:background="@drawable/textcolor"
         android:onClick="viewattendence"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="84dp"
+        android:layout_marginLeft="20dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="100dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,12 +49,11 @@
         android:text="SELECT SEM"
         android:id="@+id/textView25"
         android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:fontFamily="@string/font_family_thin"
+        android:textColor="#000000"
+        android:paddingTop="30dp"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/spinner"
-        android:layout_alignStart="@+id/spinner"
-        android:paddingTop="30dp"/>
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

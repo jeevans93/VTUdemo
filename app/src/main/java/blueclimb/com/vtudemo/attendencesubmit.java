@@ -57,7 +57,6 @@ public class attendencesubmit extends AppCompatActivity {
         abs.setText(abs.getText()+" OF SEM "+sem);
         getusn(tid);
 
-
     }
 
 

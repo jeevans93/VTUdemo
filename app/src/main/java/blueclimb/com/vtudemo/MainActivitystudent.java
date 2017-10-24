@@ -33,8 +33,8 @@ public class MainActivitystudent extends AppCompatActivity {
     }
 
     public void internals(View view){
-//        Intent intent = new Intent(MainActivity.this,Internals.class);
-//        startActivity(intent);
+        Intent intent = new Intent(MainActivitystudent.this,InternalsStudent.class);
+        startActivity(intent);
     }
 
     public void syllabus(View view){

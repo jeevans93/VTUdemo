@@ -12,7 +12,7 @@
         android:background="@drawable/round_button"
         android:backgroundTint="#ff7043"
         android:paddingRight="10dp"
-        android:text="Unit-1"
+        android:text="Sub-1"
         android:textColor="#fff"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
@@ -22,7 +22,7 @@
     <com.github.aakira.expandablelayout.ExpandableRelativeLayout
         android:id="@+id/expandableLayout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:layout_below="@+id/expandableButton1"
         android:padding="16dp"
         app:ael_duration="400"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Contents1 \nContents2 \nContents3" /></ScrollView>
+            android:text="internal 1 graph \ninternals 2 graph\ninternals 3 graph" /></ScrollView>
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
@@ -50,7 +50,7 @@
         android:background="@drawable/round_button"
         android:backgroundTint="#ffca28"
         android:paddingRight="10dp"
-        android:text="Unit-2"
+        android:text="Sub-2"
         android:textColor="#fff"
         android:layout_margin="5dp"/>
 
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Contents1 \nContents2 \nContents3"/></ScrollView>
+            android:text="internal 1 graph \ninternals 2 graph\ninternals 3 graph"/></ScrollView>
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
     <Button
@@ -84,7 +84,7 @@
         android:background="@drawable/round_button"
         android:backgroundTint="#d4e157"
         android:paddingRight="10dp"
-        android:text="Unit-3"
+        android:text="Sub-3"
         android:textColor="#fff"
         android:layout_margin="5dp"/>
 
@@ -105,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Contents1 \nContents2 \nContents3"/></ScrollView>
+            android:text="internal 1 graph \ninternals 2 graph\ninternals 3 graph"/></ScrollView>
    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
 
@@ -119,7 +119,7 @@
         android:background="@drawable/round_button"
         android:backgroundTint="#26a69a"
         android:paddingRight="10dp"
-        android:text="Unit-4"
+        android:text="Sub-4"
         android:textColor="#fff"
         android:layout_margin="5dp"/>
 
@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Contents1 \nContents2 \nContents3" />
+            android:text="internal 1 graph \ninternals 2 graph\ninternals 3 graph" />
         </ScrollView>
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 </RelativeLayout>

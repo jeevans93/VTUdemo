@@ -49,5 +49,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".calendarofevents"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".InternalsStudent"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
     </application>
 </manifest>

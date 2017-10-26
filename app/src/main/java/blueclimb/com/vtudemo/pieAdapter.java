@@ -76,7 +76,7 @@ public class pieAdapter extends ArrayAdapter<internalpie> {
         dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
         data.setValueTextSize(11f);
         data.setValueTextColor(Color.DKGRAY);
-        pp.animateXY(140, 140);
+        pp.animateXY(1400, 1400);
         pp.getLegend().setEnabled(false);
         pp.invalidate();
         yvalues.clear();

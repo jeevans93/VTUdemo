@@ -43,7 +43,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".attendencesubmit"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".unit"
+        <activity android:name=".studentInternals"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".syllabus"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>

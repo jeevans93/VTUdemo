@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/internalsubbtn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:background="@drawable/round_button"
+        android:paddingRight="10dp"
+        android:text="Sub"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+        android:id="@+id/expandableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/internalsubbtn"
+        android:padding="16dp"
+        app:ael_duration="400"
+        app:ael_expanded="false"
+        app:ael_interpolator="bounce"
+        app:ael_orientation="vertical">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/inter1"
+                android:layout_marginTop="30px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Internal 1 : " />
+                <TextView
+                    android:id="@+id/inter2"
+                    android:layout_marginTop="60px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Internal 2 : " />
+                <TextView
+                    android:id="@+id/inter3"
+                    android:layout_marginTop="90px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Internal 3 : " />
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/interchart"
+                android:layout_marginTop="120px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/avgm"
+                    android:layout_marginTop="150px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Average Marks : " />
+            </RelativeLayout>
+        </ScrollView>
+    </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+</RelativeLayout>

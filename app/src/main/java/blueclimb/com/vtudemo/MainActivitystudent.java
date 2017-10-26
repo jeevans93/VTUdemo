@@ -33,8 +33,9 @@ public class MainActivitystudent extends AppCompatActivity {
     }
 
     public void internals(View view){
-//        Intent intent = new Intent(MainActivity.this,Internals.class);
-//        startActivity(intent);
+        Intent intent = new Intent(MainActivitystudent.this,studentInternals.class);
+        intent.putExtra("usn",USN);
+        startActivity(intent);
     }
 
     public void syllabus(View view){

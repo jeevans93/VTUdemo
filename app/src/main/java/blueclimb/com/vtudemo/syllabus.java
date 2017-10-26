@@ -18,7 +18,7 @@ public class syllabus extends AppCompatActivity {
     }
 
     public void units(View view){
-        Intent intent = new Intent(syllabus.this,unit.class);
+        Intent intent = new Intent(syllabus.this,studentInternals.class);
         startActivity(intent);
     }
 

@@ -49,8 +49,9 @@ public class MainActivitystudent extends AppCompatActivity {
     }
 
     public void staffappraisal(View view){
-//        Intent intent = new Intent(MainActivity.this,staffappraisal.class);
-//        startActivity(intent);
+        Intent intent = new Intent(MainActivitystudent.this,staffappraisalhome.class);
+        intent.putExtra("usn",USN);
+        startActivity(intent);
     }
 
     public void notes(View view){

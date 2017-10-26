@@ -3,6 +3,7 @@ package blueclimb.com.vtudemo;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +30,6 @@ public class pieAdapter extends ArrayAdapter<internalpie> {
     internalpie[] ip =null;
     Context context;
     ArrayList<PieEntry> yvalues = new ArrayList<PieEntry>();
-    ArrayList<String> xVals = new ArrayList<String>();
     public pieAdapter(Context c,internalpie[] ips)
     {
         super(c,R.layout.internalspie,ips);
@@ -58,23 +58,28 @@ public class pieAdapter extends ArrayAdapter<internalpie> {
         in2.setText(in2.getText()+ip[position].getIa2());
         in3.setText(in3.getText()+ip[position].getIa3());
         avgm.setText(avgm.getText()+ip[position].getAvg());
-        yvalues.add(new PieEntry(Integer.parseInt(ip[position].getAvg())));
-        yvalues.add(new PieEntry(Integer.parseInt(ip[position].getRemmrks())));
-        xVals.add(ip[position].getAvg()+" Marks");
-        xVals.add("Out of 25");
+        yvalues.add(new PieEntry(Integer.parseInt(ip[position].getAvg()),ip[position].getAvg()+" Marks"));
+        yvalues.add(new PieEntry(Integer.parseInt(ip[position].getRemmrks()),"Out of 25"));
         PieDataSet dataSet = new PieDataSet(yvalues, "Subject Average");
+        dataSet.setSliceSpace(3);
         PieData data = new PieData(dataSet);
         pp.setData(data);
+        pp.notifyDataSetChanged();
+        Description d = new Description();
+        d.setText("");
+        pp.setDescription(d);
         pp.setContentDescription("");
         pp.setDrawHoleEnabled(true);
         pp.setCenterText("Average Chart");
-        pp.setHoleRadius(60f);
-        dataSet.setColors(ColorTemplate.LIBERTY_COLORS);
-        data.setValueTextSize(13f);
+        pp.setHoleRadius(170f);
+        pp.getLegend().setTextSize(11f);
+        dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
+        data.setValueTextSize(11f);
         data.setValueTextColor(Color.DKGRAY);
-        pp.animateXY(1400, 1400);
+        pp.animateXY(140, 140);
         pp.getLegend().setEnabled(false);
         pp.invalidate();
+        yvalues.clear();
         return Convertedview;
     }
 }

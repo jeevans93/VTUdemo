@@ -153,7 +153,6 @@ public class studentInternals extends AppCompatActivity {
                     int h1,h2;
                     h1=Math.max(ims[i][0],h2=Math.max(ims[i][1],ims[i][2]));
                     h2=Math.min(Math.max(Math.min(ims[i][1],ims[i][2]),ims[i][0]),h2);
-                    Log.e("h1 h2",String.valueOf(h1)+" "+String.valueOf(h2));
                     avg[i]=(h1+h2)/2;
                     rem[i]=25-avg[i];
                     Log.e("avg&rem",String.valueOf(avg[i])+" "+String.valueOf(rem[i]));

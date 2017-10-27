@@ -13,14 +13,13 @@ import android.widget.TextView;
 
 import com.github.aakira.expandablelayout.ExpandableLayout;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by 3lok on 26-Oct-17.
@@ -29,7 +28,8 @@ import java.util.ArrayList;
 public class pieAdapter extends ArrayAdapter<internalpie> {
     internalpie[] ip =null;
     Context context;
-    ArrayList<PieEntry> yvalues = new ArrayList<PieEntry>();
+    ArrayList<Entry> yvalues = new ArrayList<Entry>();
+    ArrayList<String> xvalues = new ArrayList<String>();
     public pieAdapter(Context c,internalpie[] ips)
     {
         super(c,R.layout.internalspie,ips);
@@ -45,12 +45,14 @@ public class pieAdapter extends ArrayAdapter<internalpie> {
         TextView in1 = (TextView)Convertedview.findViewById(R.id.inter1);
         TextView in2 = (TextView)Convertedview.findViewById(R.id.inter2);
         TextView in3 = (TextView)Convertedview.findViewById(R.id.inter3);
-        PieChart pp = (PieChart)Convertedview.findViewById(R.id.interchart);
+        final PieChart pp = (PieChart)Convertedview.findViewById(R.id.interchart);
         TextView avgm = (TextView)Convertedview.findViewById(R.id.avgm);
         b.setText(ip[position].getInternalsubbutton());
         b.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v)
             {
+                pp.notifyDataSetChanged();
+                pp.invalidate();
                 el.toggle();
             }
         });
@@ -58,28 +60,27 @@ public class pieAdapter extends ArrayAdapter<internalpie> {
         in2.setText(in2.getText()+ip[position].getIa2());
         in3.setText(in3.getText()+ip[position].getIa3());
         avgm.setText(avgm.getText()+ip[position].getAvg());
-        yvalues.add(new PieEntry(Integer.parseInt(ip[position].getAvg()),ip[position].getAvg()+" Marks"));
-        yvalues.add(new PieEntry(Integer.parseInt(ip[position].getRemmrks()),"Out of 25"));
-        PieDataSet dataSet = new PieDataSet(yvalues, "Subject Average");
-        dataSet.setSliceSpace(3);
-        PieData data = new PieData(dataSet);
+        Log.e("avg marks",ip[position].getAvg());
+        Log.e("rem marks",ip[position].getRemmrks());
+        yvalues.add(new Entry(Integer.parseInt(ip[position].getAvg()),0));
+        yvalues.add(new Entry(Integer.parseInt(ip[position].getRemmrks()),1));
+        xvalues.add(ip[position].getAvg()+" marks");
+        xvalues.add("Out of 25");
+        PieDataSet dataSet = new PieDataSet(yvalues,"Subject Average");
+        PieData data = new PieData(xvalues,dataSet);
         pp.setData(data);
-        pp.notifyDataSetChanged();
-        Description d = new Description();
-        d.setText("");
-        pp.setDescription(d);
+        pp.setDescription("");
         pp.setContentDescription("");
         pp.setDrawHoleEnabled(true);
         pp.setCenterText("Average Chart");
         pp.setHoleRadius(170f);
-        pp.getLegend().setTextSize(11f);
         dataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
         data.setValueTextSize(11f);
-        data.setValueTextColor(Color.DKGRAY);
-        pp.animateXY(1400, 1400);
+        data.setValueTextColor(Color.BLACK);
         pp.getLegend().setEnabled(false);
         pp.invalidate();
         yvalues.clear();
+        el.setExpanded(false);
         return Convertedview;
     }
 }

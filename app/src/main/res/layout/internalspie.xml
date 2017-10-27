@@ -44,17 +44,18 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="Internal 3 : " />
+        <TextView
+            android:id="@+id/avgm"
+            android:layout_below="@+id/inter3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Average Marks : " />
+
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/interchart"
-                android:layout_below="@+id/inter3"
+                android:layout_below="@+id/avgm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/avgm"
-                    android:layout_below="@+id/interchart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:text="Average Marks : " />
     </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 </RelativeLayout>

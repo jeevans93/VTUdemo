@@ -15,11 +15,17 @@ public class staffappraisalhome extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.staffappraisalhome);
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
         if(b!=null)
         {
             USN =(String) b.get("usn");
         }
+        getsubs();
+    }
+
+    public void getsubs() {
+
     }
 }
